@@ -3,6 +3,19 @@ package ru.netology.javaqa;
 public class Radio {
     private int currentStation;
     private int currentVolume;
+    private int maxStation;
+    private int minStation;
+
+    public Radio (){
+        this.maxStation = 9;
+        this.minStation = 0;
+    }
+
+    public Radio (int countStation) {
+        this.maxStation = countStation - 1;
+        this.minStation = countStation
+    }
+
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -29,7 +42,7 @@ public class Radio {
 
     public void setCurrentStation(int newCurrentStation) {
 
-        if (newCurrentStation > 9) {
+        if (newCurrentStation > maxStation) {
             return;
         }
         if (newCurrentStation < 0) {
@@ -39,7 +52,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStation < 9) {
+        if (currentStation < maxStation) {
             currentStation++;
         } else {
             currentStation = 0;
