@@ -4,16 +4,13 @@ public class Radio {
     private int currentStation;
     private int currentVolume;
     private int maxStation;
-    private int minStation;
 
     public Radio (){
         this.maxStation = 9;
-        this.minStation = 0;
     }
 
     public Radio (int countStation) {
         this.maxStation = countStation - 1;
-        this.minStation = countStation
     }
 
 
