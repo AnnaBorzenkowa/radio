@@ -11,11 +11,11 @@ class RadioTest {
     @Test
 
     public void  shouldSetStation() {
-        Radio rad = new Radio();
+        Radio rad = new Radio(30);
 
-        rad.setCurrentStation(2);
+        rad.setCurrentStation(20);
 
-        int expected = 2;
+        int expected = 20;
         int actual = rad.getCurrentStation();
 
         Assertions.assertEquals(expected,actual);
